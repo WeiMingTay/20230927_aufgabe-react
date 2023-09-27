@@ -1,0 +1,20 @@
+.main {
+  height: 80vh;
+  margin: 10vh 0;
+ 
+
+  section {
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    .blogEintrag {
+      display: flex;
+      gap: 1rem;
+      outline: 1px solid hotpink;
+      padding: .5rem;
+      background-color: lightblue;
+    }
+  }
+}
+

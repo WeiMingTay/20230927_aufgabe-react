@@ -1,0 +1,28 @@
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(hotpink, .25);
+  height: 10vh;
+  max-height: 100px;
+  min-height: 50px;
+  display: grid;
+  ul {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    li {
+      font-size: 1.5rem;
+
+      a {
+        text-decoration: none;
+        color: black;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
