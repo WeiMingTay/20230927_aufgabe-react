@@ -1,7 +1,7 @@
 .main {
   height: 80vh;
   margin: 10vh 0;
- 
+
 
   section {
     padding: 3rem;
@@ -14,6 +14,11 @@
       outline: 1px solid hotpink;
       padding: .5rem;
       background-color: lightblue;
+
+      img {
+        width: 100px;
+        aspect-ratio: 1/1;
+      }
     }
   }
 }

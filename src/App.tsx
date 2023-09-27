@@ -9,11 +9,15 @@ import Profile from "./Profile.tsx";
 
 export default function App() {
 
+    function myCallBackFunction(info: string){
+        console.log(info)
+    }
+
     return (
         <BrowserRouter>
             <Header/>
             <Routes>
-                <Route path="/" element={<Blog/>}/>
+                <Route path="/" element={<Blog myCallback={myCallBackFunction}/>}/>
                 <Route path="/profile" element={<Profile/>}/>
             </Routes>
             <Footer/>

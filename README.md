@@ -12,3 +12,14 @@
 2. Schritt 2: Nehmt euren Blog aus der HTML-Aufgabe und stellt ihn in React nach.Teilt euren Blog bedacht in Komponenten auf. Die Komponenten sollten sich in der Komponente Blog zusammenfügen
 ## Bonus Aufgaben
 1. Bonus: Erstelle eine Komponente profile (die mit der Komponente Blog auf einer Ebene stehen sollte in der App.tsx), die dich als Entwickler*in vorstellt. Nutze dazu die React-Grundlagen, die du bisher gelernt hast.
+
+# React
+## Theoretische Fragen
+1. Was sind React-Props und wofür werden sie in React verwendet?
+> React-Props sind in React verwendete Mechanismen zur Übermittlung von Daten von einer übergeordneten Komponente an eine untergeordnete Komponente.
+2. Warum sind callback functions in React wichtig? Gebt ein Beispiel.
+> Callback-Funktionen in React sind wichtig, um auf Benutzerinteraktionen zu reagieren und den Zustand der Anwendung sicher und reaktionsfähig zu aktualisieren
+## Aufgaben
+1. _Schritt 1_: Baut euren Blog so um das eine Blog-Entry Komponente dynamisch mit Props befüllt wird und die Blog-Entry Komponente mehrfach verwendet wird.
+2. _Schritt 2_: Erstelle eine Komponente profile (die mit der Komponente Blog auf einer Ebene stehen sollte in der App.tsx), die dich als Entwickler*in vorstellt.Wenn du in der letzten Aufgabe (Bonus-Aufgabe) schon eine Profil-Komponente erstellt hast, kannst du diese weiter ausbauen und mit dem neuen Wissen verbessern."
+3. 

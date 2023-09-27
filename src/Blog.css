@@ -15,5 +15,9 @@
   padding: 0.5rem;
   background-color: lightblue;
 }
+.main section .blogEintrag img {
+  width: 100px;
+  aspect-ratio: 1/1;
+}
 
 /*# sourceMappingURL=Blog.css.map */
