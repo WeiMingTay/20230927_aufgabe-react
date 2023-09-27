@@ -9,7 +9,7 @@ import Profile from "./Profile.tsx";
 
 export default function App() {
 
-    function myCallBackFunction(info: string){
+    function myCallBackFunction(info: string) {
         console.log(info)
     }
 
