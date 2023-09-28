@@ -18,11 +18,11 @@ export type Character = {
     url: string
     created: string
 
+
+
 }
 
-export const characterResponse: {
-    results: Character[]
-} = {
+export const characterResponse = {
     "info":
         {
             "count":
@@ -2499,4 +2499,12 @@ export const characterResponse: {
                 "url": "https://rickandmortyapi.com/api/character/100",
                 "created": "2017-12-01T12:02:21.611Z"
             }]
-}
+} as {
+    info: {
+        count: number;
+        pages: number;
+        next: string | null;
+        prev: string | null;
+    };
+    results: Character[];
+};

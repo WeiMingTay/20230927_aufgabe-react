@@ -1,32 +1,34 @@
-import {Character} from "../assets/rmapi.ts";
+import React, { ChangeEvent, useState, useEffect } from "react";
+import { Character } from "../assets/rmapi.ts";
 import CharacterCard from "./CharacterCard.tsx";
-import {ChangeEvent, useState} from "react";
 import CharacterCarousel from "./CharacterCarousel.tsx";
 
 type CharacterGalleryProps = {
-    characters: Character[]
-}
+    characters: Character[];
+};
+
 export default function CharacterGallery(props: CharacterGalleryProps) {
-    const [searchText, setSearchText] = useState<string>("")
+    const [searchText, setSearchText] = useState<string>("");
+    const [scrollers, setScrollers] = useState<HTMLElement[]>([]);
 
     const filteredCharacters = props.characters.filter((character) =>
-        (character.name.toLowerCase().includes(searchText.toLowerCase())) ||
-        (character.species.toLowerCase().includes(searchText.toLowerCase())) ||
-        (character.location.name.toLowerCase().includes(searchText.toLowerCase()))
-    )
+        character.name.toLowerCase().includes(searchText.toLowerCase()) ||
+        character.species.toLowerCase().includes(searchText.toLowerCase()) ||
+        character.location.name.toLowerCase().includes(searchText.toLowerCase())
+    );
 
-    // console.log(filteredCharacters.length <= 0 ? "No characters" : filteredCharacters)
+    useEffect(() => {
+        // After the component mounts, find and store the scrollers in state
+        const foundScrollers = document.querySelectorAll(".scroller");
+        setScrollers(Array.from(foundScrollers) as HTMLElement[]);
+    }, []);
 
-    function onSearchTextChange(event: ChangeEvent<HTMLInputElement>) {
-        setSearchText(event.target.value)
-    }
-
-    const scrollers = document.querySelectorAll(".scroller");
-
-// If a user hasn't opted in for recuded motion, then we add the animation
-    //if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-        addAnimation();
-    //}
+    useEffect(() => {
+        // If a user hasn't opted in for reduced motion, then we add the animation
+        if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+            addAnimation();
+        }
+    }, [scrollers]); // Run this effect whenever scrollers change
 
     function addAnimation() {
         scrollers.forEach((scroller) => {
@@ -35,7 +37,7 @@ export default function CharacterGallery(props: CharacterGalleryProps) {
 
             // Make an array from the elements within `.scroller-inner`
             const scrollerInner = scroller.querySelector(".scroller__inner");
-            const scrollerContent = Array.from(scrollerInner.children);
+            const scrollerContent = Array.from(scrollerInner?.children || []);
 
             // For each item in the array, clone it
             // add aria-hidden to it
@@ -43,26 +45,32 @@ export default function CharacterGallery(props: CharacterGalleryProps) {
             scrollerContent.forEach((item) => {
                 const duplicatedItem = item.cloneNode(true);
                 // duplicatedItem.setAttribute("aria-hidden", true);
-                scrollerInner.appendChild(duplicatedItem);
+                scrollerInner?.appendChild(duplicatedItem);
             });
         });
     }
 
-    return <>
+    function onSearchTextChange(event: ChangeEvent<HTMLInputElement>) {
+        setSearchText(event.target.value);
+    }
 
-        <input onChange={onSearchTextChange} value={searchText}/>
-        <article className={"scroller"} data-direction={"left"} data-speed={"slow"}>
-            <div className={"characterCarousel scroller__inner"}>
-                {props.characters.map(character => <CharacterCarousel character={character} key={character.id}/>)}
-            </div>
-        </article>
-        <section>{
-            filteredCharacters.length <= 0 ?
-                "No characters" :
-                filteredCharacters.map(character =>
-                    <CharacterCard
-                        key={character.id}
-                        character={character}
-                    />)}</section>
-    </>
+    return (
+        <>
+            <input onChange={onSearchTextChange} value={searchText} />
+            <article className={"scroller"} data-direction={"left"} data-speed={"slow"}>
+                <div className={"characterCarousel scroller__inner"}>
+                    {props.characters.map((character) => (
+                        <CharacterCarousel character={character} key={character.id} />
+                    ))}
+                </div>
+            </article>
+            <section>
+                {filteredCharacters.length <= 0
+                    ? "No characters"
+                    : filteredCharacters.map((character) => (
+                        <CharacterCard key={character.id} character={character} />
+                    ))}
+            </section>
+        </>
+    );
 }
