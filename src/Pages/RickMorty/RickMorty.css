@@ -1,0 +1,91 @@
+.rickMorty {
+  position: relative;
+  z-index: -1;
+}
+.rickMorty input {
+  padding: 0.5rem 1rem;
+  margin: 1rem;
+  position: fixed;
+  top: 10vh;
+  left: 1rem;
+  outline: 1rem solid white;
+  border-radius: 0 0 1rem 0;
+}
+.rickMorty section {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  transition: all 250ms ease-in;
+  margin-bottom: 10vh;
+}
+.rickMorty section .character {
+  flex-grow: 0;
+  overflow-wrap: break-word;
+  width: 10vw;
+  min-width: 150px;
+  max-width: 300px;
+}
+.rickMorty section .character h5 {
+  font-size: 1rem;
+}
+.rickMorty section .character h5 span {
+  font-size: 0.75rem;
+  font-weight: lighter;
+}
+.rickMorty section .character img {
+  width: 100%;
+}
+
+.scroller {
+  min-width: 600px;
+  width: 70vw;
+  max-width: 1500px;
+  margin: 0 auto;
+}
+.scroller .scroller__inner {
+  padding-block: 1rem;
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 1rem;
+}
+.scroller .scroller__inner img {
+  width: 100px;
+  border-radius: 50%;
+  box-shadow: 0 0.5rem 0.5rem -0.25rem;
+}
+
+.scroller[data-animated=true] {
+  overflow: hidden;
+  /*-webkit-mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);*/
+  mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
+}
+
+.scroller[data-animated=true] .scroller__inner {
+  width: max-content;
+  flex-wrap: nowrap;
+  animation: scroll var(--_animation-duration, 40s) var(--_animation-direction, forwards) linear infinite;
+}
+
+.scroller[data-direction=right] {
+  --_animation-direction: reverse;
+}
+
+.scroller[data-direction=left] {
+  --_animation-direction: forwards;
+}
+
+.scroller[data-speed=fast] {
+  --_animation-duration: 500s;
+}
+
+.scroller[data-speed=slow] {
+  --_animation-duration: 2500s;
+}
+
+@keyframes scroll {
+  to {
+    transform: translate(calc(-50% - 0.5rem));
+  }
+}
+
+/*# sourceMappingURL=RickMorty.css.map */

@@ -5,11 +5,24 @@ export type Character = {
     species: string
     type: string
     gender: string
-    location: { name: string; url: string; }
+    origin: {
+        name: string;
+        url: string;
+    }
+    location: {
+        name: string;
+        url: string;
+    }
     image: string
+    episode: string[]
+    url: string
+    created: string
+
 }
 
-export const characterResponse: { results: Character[] } = {
+export const characterResponse: {
+    results: Character[]
+} = {
     "info":
         {
             "count":

@@ -18,15 +18,19 @@ export default function App() {
 
     return (
         <BrowserRouter>
-            <Header/>
-            <Routes>
-                <Route path="/" element={<BlogPage myCallback={myCallBackFunction}/>}/>
-                <Route path="/profile" element={<ProfilePage/>}/>
-                <Route path="/rickmorty" element={<RickMortyPage/>}/>
-                <Route path="/rickmorty2" element={<RickMortyFischePage/>}/>
-                <Route path="/counter" element={<Counter/>}/>
-            </Routes>
-            <Footer/>
+            <div className={"app"}>
+                <Header/>
+                <div className={"content"}>
+                    <Routes>
+                        <Route path="/" element={<BlogPage myCallback={myCallBackFunction}/>}/>
+                        <Route path="/profile" element={<ProfilePage/>}/>
+                        <Route path="/rickmorty" element={<RickMortyPage/>}/>
+                        <Route path="/rickmorty2" element={<RickMortyFischePage/>}/>
+                        <Route path="/counter" element={<Counter/>}/>
+                    </Routes>
+                </div>
+                <Footer/>
+            </div>
         </BrowserRouter>
     )
 }
