@@ -1,6 +1,6 @@
 import "./Profile.css"
 
-export default function Profile() {
+export default function ProfilePage() {
     return <div className={"main profile"}>
 
         <div>

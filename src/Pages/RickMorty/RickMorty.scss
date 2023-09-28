@@ -1,0 +1,36 @@
+.rickMorty {
+
+  input {
+    padding: .5rem 1rem;
+    margin: 1rem;
+  }
+
+  section {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    transition: all 250ms ease-in;
+
+    .character {
+      flex-grow: 0;
+      overflow-wrap: break-word;
+      width: 10vw;
+      min-width: 150px;
+      max-width: 300px;
+
+      h5 {
+        font-size: 1rem;
+
+        span {
+          font-size: .75rem;
+          font-weight: lighter;
+        }
+      }
+
+      img {
+        width: 100%;
+
+      }
+    }
+  }
+}

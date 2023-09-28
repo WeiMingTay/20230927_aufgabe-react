@@ -1,11 +1,11 @@
 import "./Blog.css"
-import BlogEintrag from "./assets/BlogEintrag.tsx";
+import BlogEintrag from "../../assets/BlogEintrag.tsx";
 
 type blogProps = {
     myCallback: (info: string) => void
 }
 
-export default function Blog(props: blogProps) {
+export default function BlogPage(props: blogProps) {
 
 
 
