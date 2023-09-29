@@ -107,6 +107,41 @@
 1. _Schritt 1_: Passe die Character-Card so an, sodass bei einem "click" auf eine Seite weitergeleitet wird auf "/characters/{id}".
 2. _Schritt 2_: Erstelle eine weitere Route, die auf dem Pfad  "/characters/:id" die Komponente "CharacterDetailPage" navigiert. Die CharacterDetailPage soll als prop eine Liste mit allen Characteren übergeben bekommen, anhand der ID soll der richtige Character rausgesucht und angezeigt werden.
 
+`29. September 2023` `neueFische - Java Development Bootcamp`
+# Forms
+## Theoretische Aufgaben
+1. Welche Situationen kommen dir bekannt vor, wo du als User mal selber ein Formular im Browser ausgefüllt hast?
+> Login, Kontakt
+2. Welche HTML Elemente wurden da vermutlich genutzt?
+> form, input, label, button
+3. Nenne zwei Vorteile eines Formulares.
+> eindeutige Zuordnung, a11y
+4. Mit welchem Hook kann der Inhalt eines Inputs gesteuert bzw. verwaltet werden?
+> onChange
+5. Mit welcher Aktion kann ein Formular abgesendet werden?
+> onSubmit
+6. Wie verhinderst du das Neuladen der Seite nach dem der User das Formular abschickt?
+> event.preventDefault()
+
+## Aufgaben
+1. Schritt 1 : Nutzt euer Rick and Morty Projekt und erstellt eine neue branch evtl. "react-form".
+2. Schritt 2 : Erstelle  eine neue Komponente um einen neuen Character anzulegen.
+3. Schritt 3 : Erstelle eine Form und für die wichtugsten Attribute eines Characters, ein Inputfield und speichere die werte entsprechend in einem State ab.
+4. Schritt 4 : Fügt einen Button zu der Form hinzu, um die eingegeben Werte als neuen Character zu speichern. Nutze dafür die 'onSubmit' Funktion und stelle sicher, dass über eine Callbackfunktion der neue Character in die Liste mit allen Characteren, in der App.tsx, hinzugefügt wird.
+## Bonus Aufgaben
+1. Schritt 1: Passe die Character-Card so an, sodass bei einem "click" auf eine Seite weitergeleitet wird auf "/characters/{id}".
+2. Schritt 2: Erstelle eine weitere Route, die auf dem Pfad  "/characters/:id" die Komponente "CharacterDetailCard" navigiert. Die CharacterDetailCard soll als prop eine Liste mit allen Characteren übergeben bekommen, anhand der ID soll der richtige Character rausgesucht und angezeigt werden.
+3. Erstelle eine neue Route bsp. "/charcters/add" die deine Komponente zum erstellen von neuen Characteren anzeigt.
+4. Erweiter deine Gallery, sodass der Nutzer zu jedem Character, Kommentare verfassen kann.
+
+
+
+
+
+
+
+
+
 
 
 

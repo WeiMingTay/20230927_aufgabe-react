@@ -1,6 +1,5 @@
 .rickMorty {
   position: relative;
-  z-index: -1;
 
 
   input {
@@ -11,6 +10,9 @@
     left: 1rem;
     outline: 1rem solid white;
     border-radius: 0 0 1rem 0;
+    background-color: #fbf976;
+    z-index: 2;
+    accent-color: #a9d3e9;
   }
 
   section {
@@ -26,6 +28,7 @@
       width: 10vw;
       min-width: 150px;
       max-width: 300px;
+      z-index: 1;
 
       h5 {
         font-size: 1rem;
@@ -39,6 +42,11 @@
       img {
         width: 100%;
 
+      }
+      a {
+        text-decoration: none;
+        color: inherit;
+        cursor: pointer;
       }
     }
   }

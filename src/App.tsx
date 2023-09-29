@@ -11,6 +11,7 @@ import RickMortyFischePage from "./Pages/RickMortyFische/RickMortyFischePage.tsx
 import KontaktPage from "./Pages/Kontakt/KontaktPage.tsx";
 import CountryPage from "./Pages/Country/CountryPage.tsx";
 import CharacterDetailPage from "./Pages/RickMortyFische/CharacterDetailPage.tsx";
+import React from "react";
 
 
 export default function App() {

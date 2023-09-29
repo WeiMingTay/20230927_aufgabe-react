@@ -1,6 +1,5 @@
 .rickMorty {
   position: relative;
-  z-index: -1;
 }
 .rickMorty input {
   padding: 0.5rem 1rem;
@@ -10,6 +9,9 @@
   left: 1rem;
   outline: 1rem solid white;
   border-radius: 0 0 1rem 0;
+  background-color: #fbf976;
+  z-index: 2;
+  accent-color: #a9d3e9;
 }
 .rickMorty section {
   display: flex;
@@ -24,6 +26,7 @@
   width: 10vw;
   min-width: 150px;
   max-width: 300px;
+  z-index: 1;
 }
 .rickMorty section .character h5 {
   font-size: 1rem;
@@ -34,6 +37,11 @@
 }
 .rickMorty section .character img {
   width: 100%;
+}
+.rickMorty section .character a {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
 }
 
 .scroller {

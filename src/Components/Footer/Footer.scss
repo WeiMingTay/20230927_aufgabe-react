@@ -8,10 +8,12 @@
   max-height: 100px;
   min-height: 50px;
   display: grid;
+  place-items: center;
+  z-index: 999;
   ul {
     display: flex;
-    justify-content: space-around;
     list-style: none;
+    gap: 4rem;
     li {
       font-size: 1.5rem;
 

@@ -1,7 +1,9 @@
 import React, { ChangeEvent, useState, useEffect } from "react";
-import { Character } from "../../assets/rmapi.ts";
+import {Character, characterResponse} from "../../assets/rmapi.ts";
 import CharacterCard from "./CharacterCard.tsx";
 import CharacterCarousel from "./CharacterCarousel.tsx";
+import CharacterDetailPage from "../../Pages/RickMortyFische/CharacterDetailPage.tsx";
+import {Route} from "react-router-dom";
 
 type CharacterGalleryProps = {
     characters: Character[];
@@ -64,6 +66,7 @@ export default function CharacterGallery(props: CharacterGalleryProps) {
                     ))}
                 </div>
             </article>
+
             <section>
                 {filteredCharacters.length <= 0
                     ? "No characters"

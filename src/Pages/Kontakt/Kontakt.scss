@@ -1,16 +1,37 @@
 .kontakt {
   display: grid;
   place-items: center;
-  background-color: #a9d3e9;
 
-  section {
-    border: 2px solid green;
+
+  section, form {
+    padding: 1rem;
     display: flex;
     flex-direction: column;
     gap: 2rem;
+    background-color: #a9d3e9;
 
     input {
       accent-color: #fbf976;
+    }
+  }
+
+  .kontaktGallery {
+    max-width: 800px;
+    width: 70vw;
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+
+    .kontaktCard {
+      p {
+        padding: .5rem 1rem;
+        font-size: 2rem;
+        display: inline-block;
+
+        span {
+          font-size: 1rem;
+        }
+      }
     }
   }
 }
