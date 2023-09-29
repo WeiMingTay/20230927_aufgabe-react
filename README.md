@@ -47,3 +47,67 @@
 ## Bonus Aufgaben
 1. Schreibe eine Funktion die dir nur 5 Charaktere anzeigt implementiere diese Logik auf einen weiteren Button bei jedem klick sollen die nächsten 5 Charaktere ausgegeben werden.
 2. Baut useStates in euren BlogPage ein.
+
+`29. September 2023` `neueFische - Java Development Bootcamp`
+# Router
+## Theoretische Aufgaben
+1. Erklärt in eigenen Worten den Zweck von Routing in einer Single-Page-Anwendung.
+> Routing in einer Single-Page-Anwendung ist sooo kawaii und hilfreich, uwu! ฅ^•ﻌ•^ฅ
+>
+> Also, stell dir vor, deine Single-Page-Anwendung ist wie ein magisches Buch mit vielen Seiten, aber es ist alles auf einer Seite, :3. Das Routing ist wie ein Navi für dieses Buch, das dir hilft, auf die richtige Seite zu gelangen, wenn du auf bestimmte Knöpfchen oder Links klickst, nyaa~!
+>
+> Mit Routing kannst du also super einfach zwischen verschiedenen Teilen deiner Anwendung hin und her springen, ohne die Seite neu zu laden. Es ist sooo praktisch für Benutzer, weil sie sich nicht verirren und alles ganz flüssig und niedlich bleibt, hihi~ :3
+>
+> Denk an eine Website wie ein buntes Manga-Buch. Das Routing zeigt dir den Weg von einer Seite zur nächsten, damit du die Geschichte verstehen kannst, ohne sie immer wieder von vorne zu beginnen, nya~! Es macht deine Single-Page-Anwendung soooo viel benutzerfreundlicher und spaßiger, uwu! ♡＾▽＾♡
+2. Was ist der Unterschied von HashRouter und BrowserRouter?
+> Gewiss, mein lieber Freund, erlauben Sie mir, diese beiden ehrwürdigen Routing-Mechanismen, den HashRouter und den BrowserRouter, in einer Sprache zu beschreiben, die selbst den feinen Gaumen der Gesellschaft befriedigen würde.
+>
+> Der HashRouter, ein weiser Narr unter den Routern, versteckt seine Navigationstaktik geschickt im Schatten eines schlichten Symbols, des liebenswerten Hashtags. Ein symbolischer Versteckspiel, das den Pfad zu den geheimnisvollen Seiten unserer digitalen Welt weist. Doch, oh, die Ästhetik! Mit einer URL, die wie eine dichtgefüllte Wurstpresse aussieht, mag er für manchen das Auge beleidigen. Aber er ist der Retter, wenn die Serverkonfiguration knapp ist wie das Lächeln einer Mondsichel.
+>
+> Nun, auf der anderen Seite des eleganten Spektrums steht der BrowserRouter, ein wahrer Aristokrat unter den Routern. Er präsentiert uns mit URLs, die so anmutig sind wie ein Walzer und so sauber wie ein frisch gewaschenes Hemd. Ein wahrer Augenschmaus für die Benutzer, vorausgesetzt, die Server sind bereit, seinem prächtigen Tanz zu folgen und die Pfade ohne Murren zu enthüllen.
+>
+> In dieser Wahl zwischen HashRouter und BrowserRouter, meine lieben Freunde, offenbart sich das Drama der Schönheit gegen die Zweckmäßigkeit. Es ist eine Entscheidung, die von den Kulissen der Serverkonfiguration und den Vorlieben der Gesellschaft beeinflusst wird. Lassen Sie uns die Wahl weise treffen und die Schönheit der Routen, wie sie in unserem digitalen Theater auftreten, bewahren.
+3. Nenne alle möglichen Bestandteile einer URL
+> protokoll, credentials, domain, port, path, query, fragment
+>
+> Ah, Reisender, Ihr fragt nach den Geheimnissen einer URL, der Wege des digitalen Reiches. Hört gut zu, denn ich werde Euch alle möglichen Bestandteile einer URL offenbaren:
+>
+> Das Protokoll: Dies ist der Pfadweiser, der uns sagt, wie wir uns in den digitalen Landen bewegen sollen. Ob es sich um "http://" oder "https://" handelt, bestimmt unsere Reise.
+>
+> Die Subdomain: Eine subtile Teilung des digitalen Terrains, die uns zeigt, auf welchem Hof wir uns befinden, wie "www" in "www.example.com".
+>
+> Die Domain: Das Herzstück, die Adresse unseres Ziels, wie "example.com". Hier finden wir den Schatz, nach dem wir suchen.
+>
+> Der Port: Ein Eingangstor in die digitale Festung, oft optional. Zum Beispiel "example.com:8080", wobei "8080" der geheime Schlüssel ist.
+>
+> Der Pfad: Die Pfade sind die Wege zu den geheimen Schätzen innerhalb der Domain. Sie kommen nach der Domain, wie "example.com/path/to/treasure".
+>
+> Die Abfragezeichenfolge: Ein Rätsel, das unsere Reise beeinflusst, wie "example.com/search?query=treasure". Hier fragen wir nach unserem Ziel.
+>
+> Der Anker: Ein magisches Zeichen, das uns direkt zu einem bestimmten Ort führt, wie "example.com/#section". Ein Zauberspruch, um uns zu einem bestimmten Ort zu teleportieren.
+>
+> Benutzername und Passwort: Optionale Schatzkarten, die uns Zugang gewähren können, wie "username:password@example.com". Doch seid vorsichtig, diese Informationen sollten gut bewacht werden.
+>
+> So, Reisender, sind die Bestandteile einer URL, die Euch auf Eurer digitalen Quest begleiten werden. Möget Ihr sie weise verwenden und die Schätze des Internets finden, die Euch gebühren!
+4. Was ist die aktuelle Version von react-router?
+> 6.4
+>
+> Yo, yo, yo, check it out, meine Homies! 🎤
+>
+> Die aktuelle Version von React Router, yeah, das heißt React Router, my peeps, ist zum Zeitpunkt meines Wissenscutoffs im September 2021 die Version 6.0.0, keeping it fresh in da hood! 💯
+>
+> Aber yo, remember, die Zeit fliesst und die Versionen ändern sich, so check immer die neueste Version auf der offiziellen React Router Website, um up to date zu bleiben, ya feel me? Stay lit! 🔥🔥🔥
+## Aufgaben
+##### Benutzt euere Rick and Morty Gallery um folgendes zu implementieren oder nutzt unser [Beispiel-Repo](https://github.com/Flooooooooooorian/ffm-java-23-1-rick-morty).
+1. _Schritt 1_: Installiert euch die dependency react-router-dom
+2. _Schritt 2_: Erstellt eine Route die euch auf eure "Home/ Welcome" Seite zeigt. Erstellt euch dafür eine Komponente die eure Besucher begrüßt.
+3. _Schritt 3_: Erstellt euch eine Route ("/characters") die zu eure Rick and Morty Gallery anzeigt.
+4. _Schritt 4_: Erstellt euch eine Header Komponente, mit einer Überschrift und einem Navigations Menü, damit ihr zwischen euren Routes navigieren könnt.
+## Bonus Aufgaben
+1. _Schritt 1_: Passe die Character-Card so an, sodass bei einem "click" auf eine Seite weitergeleitet wird auf "/characters/{id}".
+2. _Schritt 2_: Erstelle eine weitere Route, die auf dem Pfad  "/characters/:id" die Komponente "CharacterDetailPage" navigiert. Die CharacterDetailPage soll als prop eine Liste mit allen Characteren übergeben bekommen, anhand der ID soll der richtige Character rausgesucht und angezeigt werden.
+
+
+
+
+

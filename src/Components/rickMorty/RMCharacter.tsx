@@ -1,4 +1,4 @@
-import "../Pages/RickMorty/RickMorty.css"
+import "../../Pages/RickMorty/RickMorty.css"
 
 type characterProps = {
     name: string,

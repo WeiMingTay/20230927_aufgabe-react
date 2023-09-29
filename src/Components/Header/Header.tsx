@@ -11,6 +11,7 @@ export default function Header() {
                 <li><Link to={"/rickmorty"}>Rick</Link></li>
                 <li><Link to={"/rickmorty2"}>Morty</Link></li>
                 <li><Link to={"/counter"}>Counter</Link></li>
+                <li><Link to={"/country"}>Countries</Link></li>
             </ul>
         </nav>
     </div>

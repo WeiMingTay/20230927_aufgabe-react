@@ -1,6 +1,6 @@
 import {useState} from "react";
 import {Character, characterResponse} from "../../assets/rmapi.ts";
-import CharacterGallery from "../../Components/CharacterGallery.tsx";
+import CharacterGallery from "../../Components/rickMortyFische/CharacterGallery.tsx";
 
 import "../RickMorty/RickMorty.css"
 

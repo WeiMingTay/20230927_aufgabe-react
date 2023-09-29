@@ -1,0 +1,39 @@
+[
+    {
+        "name": "Musang King",
+        "origin": "Malaysia",
+        "description": "Musang King is highly sought after for its intense flavor and vibrant yellow flesh.",
+        "taste_profile": "Strong aroma with a sweet, creamy, and slightly bitter taste.",
+        "fun_fact": "Musang King is a favorite among durian enthusiasts and is exported worldwide."
+    },
+    {
+        "name": "D24",
+        "origin": "Malaysia",
+        "description": "D24 is known for its distinctive bittersweet taste and rich, golden flesh.",
+        "taste_profile": "Balanced combination of sweetness and bitterness.",
+        "fun_fact": "D24 is often used in durian-based desserts and ice creams."
+    },
+    {
+        "name": "Black Thorn",
+        "origin": "Malaysia",
+        "description": "Black Thorn is prized for its intense sweetness and unique fragrance.",
+        "taste_profile": "Incredibly sweet with a floral aroma and a hint of bitterness.",
+        "fun_fact": "Black Thorn durians are known for their distinct dark purple husks."
+    },
+    {
+        "name": "Mao Shan Wang",
+        "origin": "Malaysia",
+        "description": "Mao Shan Wang is celebrated for its rich and creamy flesh with a strong flavor.",
+        "taste_profile": "Robust sweetness with a complex, nutty undertone.",
+        "fun_fact": "Mao Shan Wang is often considered the 'King of Durians' for its exceptional taste."
+    },
+    {
+        "name": "Red Prawn",
+        "origin": "Malaysia",
+        "description": "Red Prawn durians are known for their reddish-orange flesh and sweet taste.",
+        "taste_profile": "Sweet and fragrant with a custard-like texture.",
+        "fun_fact": "Red Prawn durians are a favorite in Malaysia's local markets."
+    }
+    // Add more Malaysian durian varieties here
+]
+

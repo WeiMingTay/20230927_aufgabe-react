@@ -1,5 +1,5 @@
 import React, { ChangeEvent, useState, useEffect } from "react";
-import { Character } from "../assets/rmapi.ts";
+import { Character } from "../../assets/rmapi.ts";
 import CharacterCard from "./CharacterCard.tsx";
 import CharacterCarousel from "./CharacterCarousel.tsx";
 

@@ -1,4 +1,4 @@
-import RMCharacter from '../../Components/RMCharacter.tsx';
+import RMCharacter from '../../Components/rickMorty/RMCharacter.tsx';
 import RMapi from '../../assets/RMapi.json';
 import "./RickMorty.css"
 

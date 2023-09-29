@@ -19,7 +19,6 @@ export type Character = {
     created: string
 
 
-
 }
 
 export const characterResponse = {

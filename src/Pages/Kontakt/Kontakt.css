@@ -1,0 +1,16 @@
+.kontakt {
+  display: grid;
+  place-items: center;
+  background-color: #a9d3e9;
+}
+.kontakt section {
+  border: 2px solid green;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.kontakt section input {
+  accent-color: #fbf976;
+}
+
+/*# sourceMappingURL=Kontakt.css.map */

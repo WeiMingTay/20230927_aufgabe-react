@@ -1,0 +1,16 @@
+.kontakt {
+  display: grid;
+  place-items: center;
+  background-color: #a9d3e9;
+
+  section {
+    border: 2px solid green;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    input {
+      accent-color: #fbf976;
+    }
+  }
+}

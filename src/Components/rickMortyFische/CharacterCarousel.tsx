@@ -1,5 +1,5 @@
-import {Character} from "../assets/rmapi.ts";
-import "../Pages/RickMorty/RickMorty.css"
+import {Character} from "../../assets/rmapi.ts";
+import "../../Pages/RickMorty/RickMorty.css"
 
 type CharacterCardProps = {
     character: Character
