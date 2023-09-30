@@ -1,0 +1,41 @@
+.country section {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding-bottom: 15vh;
+}
+.country section div {
+  width: fit-content;
+  max-width: 200px;
+}
+
+.countryCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1;
+  text-decoration: none;
+  color: inherit;
+  font-size: 1.25rem;
+}
+.countryCard p:last-of-type {
+  font-size: 1rem;
+}
+.countryCard img {
+  max-width: 300px;
+  min-width: 100px;
+  width: 5vw;
+  box-shadow: 5px 5px 20px -7px black;
+}
+
+.countryDetail {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.countryDetail img {
+  box-shadow: 10px 10px 30px 5px grey;
+  height: 50vh;
+}
+
+/*# sourceMappingURL=Country.css.map */

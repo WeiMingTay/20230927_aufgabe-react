@@ -32,7 +32,7 @@ export default function CountryDetails(props: CountryDetailsProps) {
 <p>Hauptstadt: {currentCountry.capital}</p>
                 <p>Einwohnerzahl: {currentCountry.population}</p>
                 <a href={currentCountry.maps.googleMaps}>zu GoogleMaps</a>
-                <a href={currentCountry.maps.openstreetmap}>zu OpenStreetMap</a>
+                <a href={currentCountry.maps.openStreetMaps}>zu OpenStreetMap</a>
 
 
             </>
