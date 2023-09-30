@@ -1,9 +1,8 @@
-import React, { ChangeEvent, useState, useEffect } from "react";
+import React, {ChangeEvent, useState, useEffect} from "react";
 import {Character, characterResponse} from "../../assets/rmapi.ts";
 import CharacterCard from "./CharacterCard.tsx";
 import CharacterCarousel from "./CharacterCarousel.tsx";
-import CharacterDetailPage from "../../Pages/RickMortyFische/CharacterDetailPage.tsx";
-import {Route} from "react-router-dom";
+import AddCharacter from "./AddCharacter.tsx";
 
 type CharacterGalleryProps = {
     characters: Character[];
@@ -13,10 +12,14 @@ export default function CharacterGallery(props: CharacterGalleryProps) {
     const [searchText, setSearchText] = useState<string>("");
     const [scrollers, setScrollers] = useState<HTMLElement[]>([]);
 
+    const [characters, setCharacters] = useState<Character[]>(characterResponse.results)
+
     const filteredCharacters = props.characters.filter((character) =>
         character.name.toLowerCase().includes(searchText.toLowerCase()) ||
-        character.species.toLowerCase().includes(searchText.toLowerCase()) ||
-        character.location.name.toLowerCase().includes(searchText.toLowerCase())
+
+        (character.species ? character.species.toLowerCase().includes(searchText.toLowerCase()) : false) ||
+
+        (character.location && character.location.name ? character.location.name.toLowerCase().includes(searchText.toLowerCase()) : false)
     );
 
     useEffect(() => {
@@ -56,22 +59,26 @@ export default function CharacterGallery(props: CharacterGalleryProps) {
         setSearchText(event.target.value);
     }
 
+    function saveCharacter(characterToSave: Character) {
+        setCharacters([...characters, characterToSave])
+    }
+
     return (
         <>
-            <input onChange={onSearchTextChange} value={searchText} />
+            <input className={"searchCharacter"} onChange={onSearchTextChange} value={searchText}/>
             <article className={"scroller"} data-direction={"left"} data-speed={"slow"}>
                 <div className={"characterCarousel scroller__inner"}>
                     {props.characters.map((character) => (
-                        <CharacterCarousel character={character} key={character.id} />
+                        <CharacterCarousel character={character} key={character.id}/>
                     ))}
                 </div>
             </article>
-
+            <AddCharacter saveCharacter={saveCharacter}/>
             <section>
                 {filteredCharacters.length <= 0
                     ? "No characters"
                     : filteredCharacters.map((character) => (
-                        <CharacterCard key={character.id} character={character} />
+                        <CharacterCard key={character.id} character={character}/>
                     ))}
             </section>
         </>

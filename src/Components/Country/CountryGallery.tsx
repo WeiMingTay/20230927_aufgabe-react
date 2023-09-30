@@ -8,8 +8,8 @@ type CountryGalleryProps = {
 export default function CountryGallery(props: CountryGalleryProps) {
     return <>
         <section>
-            {props.countries.map((country, index) =>
-                <CountryCard country={country} key={index}/>)}
+            {props.countries.map((country) =>
+                <CountryCard country={country} key={country.cca2}/>)}
         </section>
     </>
 }

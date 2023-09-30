@@ -117,7 +117,7 @@
 3. Nenne zwei Vorteile eines Formulares.
 > eindeutige Zuordnung, a11y
 4. Mit welchem Hook kann der Inhalt eines Inputs gesteuert bzw. verwaltet werden?
-> onChange
+> useState
 5. Mit welcher Aktion kann ein Formular abgesendet werden?
 > onSubmit
 6. Wie verhinderst du das Neuladen der Seite nach dem der User das Formular abschickt?

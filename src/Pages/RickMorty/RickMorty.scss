@@ -2,7 +2,7 @@
   position: relative;
 
 
-  input {
+  .searchCharacter {
     padding: .5rem 1rem;
     margin: 1rem;
     position: fixed;
@@ -14,7 +14,10 @@
     z-index: 2;
     accent-color: #a9d3e9;
   }
-
+form {
+  padding: 1rem 3rem;
+  background-color: #a9d3e9;
+}
   section {
     display: flex;
     flex-wrap: wrap;

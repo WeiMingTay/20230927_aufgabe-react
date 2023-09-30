@@ -5,12 +5,25 @@ export type Country = {
 
     }
     capital: string
-    languages: string[]
-    translations: string[]
+    translations: {
+        deu: {
+            official: string
+        }
+    }
+
     flag: string
-    flags: string[]
+    flags: {
+        png: string
+        svg: string
+    }
     population: number
     continents: string
+    maps: {
+        googleMaps: string
+        openStreetMaps: string
+    }
+    cca2: string
+
 }
 
 export const countryResponse = {

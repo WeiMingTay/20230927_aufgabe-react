@@ -11,6 +11,10 @@
 }
 .kontakt section input, .kontakt form input {
   accent-color: #fbf976;
+  margin-left: 1rem;
+}
+.kontakt section input:required, .kontakt form input:required {
+  border-bottom: 2px solid red;
 }
 .kontakt .kontaktGallery {
   max-width: 800px;

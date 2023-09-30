@@ -1,7 +1,7 @@
 .rickMorty {
   position: relative;
 }
-.rickMorty input {
+.rickMorty .searchCharacter {
   padding: 0.5rem 1rem;
   margin: 1rem;
   position: fixed;
@@ -12,6 +12,10 @@
   background-color: #fbf976;
   z-index: 2;
   accent-color: #a9d3e9;
+}
+.rickMorty form {
+  padding: 1rem 3rem;
+  background-color: #a9d3e9;
 }
 .rickMorty section {
   display: flex;

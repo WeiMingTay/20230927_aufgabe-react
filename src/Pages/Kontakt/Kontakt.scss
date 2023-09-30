@@ -12,7 +12,13 @@
 
     input {
       accent-color: #fbf976;
+      margin-left: 1rem;
+
+      &:required {
+        border-bottom: 2px solid red;
+      }
     }
+
   }
 
   .kontaktGallery {

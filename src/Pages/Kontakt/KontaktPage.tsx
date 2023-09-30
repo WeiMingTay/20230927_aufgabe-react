@@ -54,10 +54,10 @@ export default function KontaktPage() {
                 <label>Farbe
                     <input type="color" onChange={onColorChange} value={color}/>
                 </label>
-                <label>Email
+               <label>Email
                     <input type="email"/>
                 </label>
-                <button>Save</button>
+                <button>Speichern</button>
             </form>
 
         </section>
