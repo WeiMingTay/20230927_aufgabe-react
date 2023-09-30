@@ -12,11 +12,14 @@ import KontaktPage from "./Pages/Kontakt/KontaktPage.tsx";
 import CountryPage from "./Pages/Country/CountryPage.tsx";
 // import CharacterDetailPage from "./Pages/RickMortyFische/CharacterDetailPage.tsx";
 import React, {useState} from "react";
-import CountryDetails from "./Components/Country/CountryDetails.tsx";
+import CountryDetailsPage from "./Pages/Country/CountryDetailsPage.tsx";
 import {Country, countryResponse} from "./assets/countryData.ts";
+import CharacterDetailPage from "./Pages/RickMortyFische/CharacterDetailPage.tsx";
+import {Character, characterResponse} from "./assets/rmapi.ts";
 
 
 export default function App() {
+    const [characters, setCharacters] = useState<Character[]>(characterResponse.results)
     const [countries, setCountries] = useState<Country[]>(countryResponse.countries)
 
     function myCallBackFunction(info: string) {
@@ -33,11 +36,11 @@ export default function App() {
                         <Route path="/profile" element={<ProfilePage/>}/>
                         <Route path="/rickmorty" element={<RickMortyPage/>}/>
                         <Route path="/rickmorty2" element={<RickMortyFischePage/>}/>
-                        {/*<Route path="/rickmorty2/:id" element={<CharacterDetailPage/>}/>*/}
+                        <Route path="/rickmorty2/:id" element={<CharacterDetailPage character={characters}/>}/>
                         <Route path="/counter" element={<Counter/>}/>
                         <Route path="/kontakt" element={<KontaktPage/>}/>
                         <Route path="/country" element={<CountryPage/>}/>
-                        <Route path="/country/:cca2" element={<CountryDetails countries={countries}/>}/>
+                        <Route path="/country/:cca2" element={<CountryDetailsPage countries={countries}/>}/>
 
                     </Routes>
                 </div>
