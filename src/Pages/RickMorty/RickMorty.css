@@ -63,7 +63,7 @@
 .scroller .scroller__inner img {
   width: 100px;
   border-radius: 50%;
-  box-shadow: 0 0.5rem 0.5rem -0.25rem;
+  box-shadow: 0 0.5rem 0.5rem -0.25rem gray;
 }
 
 .scroller[data-animated=true] {
@@ -98,6 +98,21 @@
   to {
     transform: translate(calc(-50% - 0.5rem));
   }
+}
+.characterCarousel img:hover {
+  scale: 1.1;
+}
+
+.charakterDetail {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.charakterDetail h3 {
+  font-size: 3rem;
+}
+.charakterDetail img {
+  border-radius: 5%;
 }
 
 /*# sourceMappingURL=RickMorty.css.map */

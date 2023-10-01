@@ -7,6 +7,7 @@ type CountryGalleryProps = {
 }
 
 export default function CountryGallery(props: CountryGalleryProps) {
+
     const [sortedCountries, setSortedCountries] = useState([...props.countries]);
     const [sortDirection, setSortDirection] = useState<'asc' | 'desc'>('asc');
 

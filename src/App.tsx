@@ -16,16 +16,19 @@ import CountryDetailsPage from "./Pages/Country/CountryDetailsPage.tsx";
 import {Country, countryResponse} from "./assets/countryData.ts";
 import CharacterDetailPage from "./Pages/RickMortyFische/CharacterDetailPage.tsx";
 import {Character, characterResponse} from "./assets/rmapi.ts";
+import AddCharacter from "./Components/rickMortyFische/AddCharacter.tsx";
 
 
 export default function App() {
     const [characters, setCharacters] = useState<Character[]>(characterResponse.results)
-    const [countries, setCountries] = useState<Country[]>(countryResponse.countries)
+    const [countries] = useState<Country[]>(countryResponse.countries)
 
     function myCallBackFunction(info: string) {
         console.log(info)
     }
-
+    function saveCharacter(characterToSave: Character) {
+        setCharacters([...characters, characterToSave])
+    }
     return (
         <BrowserRouter>
             <div className={"app"}>
@@ -37,6 +40,7 @@ export default function App() {
                         <Route path="/rickmorty" element={<RickMortyPage/>}/>
                         <Route path="/rickmorty2" element={<RickMortyFischePage/>}/>
                         <Route path="/rickmorty2/:id" element={<CharacterDetailPage character={characters}/>}/>
+                        <Route path="/rickmorty2/add" element={<AddCharacter saveCharacter={saveCharacter}/>}/>
                         <Route path="/counter" element={<Counter/>}/>
                         <Route path="/kontakt" element={<KontaktPage/>}/>
                         <Route path="/country" element={<CountryPage/>}/>

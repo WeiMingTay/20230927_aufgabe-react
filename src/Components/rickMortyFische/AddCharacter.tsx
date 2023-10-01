@@ -1,11 +1,14 @@
 import {ChangeEvent, FormEvent, useState} from "react";
 import {Character} from "../../assets/rmapi.ts";
+import {useNavigate} from "react-router-dom";
 
 type AddCharacterProps = {
     saveCharacter: (characterToSave: Character) => void
 }
 export default function AddCharacter(props: AddCharacterProps) {
     const [newCharacter, setNewCharacter] = useState<Character>({name: "", status: ""})
+
+    const navigate = useNavigate()
 
     function onInputChange(event: ChangeEvent<HTMLInputElement>) {
         setNewCharacter({...newCharacter, [event.target.name]: event.target.value})
@@ -17,8 +20,7 @@ export default function AddCharacter(props: AddCharacterProps) {
 
         props.saveCharacter(newCharacter)
 
-        setNewCharacter({name: "", status: ""})
-console.log(newCharacter)
+        navigate("/rickmorty2")
     }
 
     return <form onSubmit={onCharacterSave}>

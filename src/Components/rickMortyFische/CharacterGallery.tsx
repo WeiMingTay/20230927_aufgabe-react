@@ -3,12 +3,14 @@ import {Character, characterResponse} from "../../assets/rmapi.ts";
 import CharacterCard from "./CharacterCard.tsx";
 import CharacterCarousel from "./CharacterCarousel.tsx";
 import AddCharacter from "./AddCharacter.tsx";
+import {Link} from "react-router-dom";
 
 type CharacterGalleryProps = {
     characters: Character[];
 };
 
 export default function CharacterGallery(props: CharacterGalleryProps) {
+
     const [searchText, setSearchText] = useState<string>("");
     const [scrollers, setScrollers] = useState<HTMLElement[]>([]);
 
@@ -59,9 +61,6 @@ export default function CharacterGallery(props: CharacterGalleryProps) {
         setSearchText(event.target.value);
     }
 
-    function saveCharacter(characterToSave: Character) {
-        setCharacters([...characters, characterToSave])
-    }
 
     return (
         <>
@@ -73,7 +72,7 @@ export default function CharacterGallery(props: CharacterGalleryProps) {
                     ))}
                 </div>
             </article>
-            <AddCharacter saveCharacter={saveCharacter}/>
+            <Link to={"/rickmorty2/add"}>Charakter hinzufügen</Link>
             <section>
                 {filteredCharacters.length <= 0
                     ? "No characters"

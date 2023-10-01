@@ -6,7 +6,7 @@ import "./Country.css"
 export default function CountryPage() {
     // Extract the array of countries from countryResponse.countries
 
-    const [countries, setCountries] = useState<Country[]>(countryResponse.countries);
+    const [countries] = useState<Country[]>(countryResponse.countries);
 
     return (
         <div className={"main country"}>

@@ -14,7 +14,7 @@ export default function CharacterCard(props: CharacterCardProps) {
         <Link to={`/rickmorty2/${props.character.id}`}>
             <img src={props.character.image} alt={props.character.name}/>
             <h5>{props.character.name}, <span>{props.character.species}</span></h5>
-            <p>{props.character.location.name}</p>
+            <p>{props.character.location?.name}</p>
         </Link>
     </div>
 }

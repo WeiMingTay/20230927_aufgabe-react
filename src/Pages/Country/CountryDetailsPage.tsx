@@ -42,8 +42,8 @@ export default function CountryDetailsPage(props: CountryDetailsProps) {
                 <img src={currentCountry.flags.svg} alt={currentCountry.name.official}/>
                 <p>Hauptstadt: {currentCountry.capital}</p>
                 <p>Einwohnerzahl: {currentCountry.population.toLocaleString('de-DE')}</p>
-                <a href={currentCountry.maps.googleMaps}>zu GoogleMaps</a>
-                <a href={currentCountry.maps.openStreetMaps}>zu OpenStreetMap</a>
+                <a target={"_blank"} href={currentCountry.maps.googleMaps}>zu GoogleMaps</a>
+                <a target={"_blank"} href={currentCountry.maps.openStreetMaps}>zu OpenStreetMap</a>
 
 
             </>

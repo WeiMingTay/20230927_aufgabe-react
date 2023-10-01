@@ -4,7 +4,7 @@ export type Country = {
         official: string;
 
     }
-    capital: string
+    capital?: string[]
     translations: {
         deu: {
             official: string
@@ -17,7 +17,7 @@ export type Country = {
         svg: string
     }
     population: number
-    continents: string
+    continents: string[]
     maps: {
         googleMaps: string
         openStreetMaps: string
