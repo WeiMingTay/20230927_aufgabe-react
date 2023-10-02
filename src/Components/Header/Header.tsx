@@ -8,8 +8,9 @@ export default function Header() {
             <ul>
                 <li><Link to="/">Blog</Link></li>
                 <li><Link to="/profile">Profil</Link></li>
-                <li><Link to={"/rickmorty"}>Rick</Link></li>
-                <li><Link to={"/rickmorty2"}>Morty</Link></li>
+                {/*<li><Link to={"/rickmorty"}>Rick</Link></li>*/}
+                <li><Link to={"/rickmorty2"}>Rick & Morty</Link></li>
+                <li><Link to={"/news"}>News</Link></li>
                 <li><Link to={"/counter"}>Counter</Link></li>
                 <li><Link to={"/country"}>Countries</Link></li>
             </ul>

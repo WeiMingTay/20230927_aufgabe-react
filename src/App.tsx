@@ -17,6 +17,7 @@ import {Country, countryResponse} from "./assets/countryData.ts";
 import CharacterDetailPage from "./Pages/RickMortyFische/CharacterDetailPage.tsx";
 import {Character, characterResponse} from "./assets/rmapi.ts";
 import AddCharacter from "./Components/rickMortyFische/AddCharacter.tsx";
+import NewsGallery from "./Pages/News/NewsGallery.tsx";
 
 
 export default function App() {
@@ -43,6 +44,7 @@ export default function App() {
                         <Route path="/rickmorty2/add" element={<AddCharacter saveCharacter={saveCharacter}/>}/>
                         <Route path="/counter" element={<Counter/>}/>
                         <Route path="/kontakt" element={<KontaktPage/>}/>
+                        <Route path="/news" element={<NewsGallery/>}/>
                         <Route path="/country" element={<CountryPage/>}/>
                         <Route path="/country/:cca2" element={<CountryDetailsPage countries={countries}/>}/>
 

@@ -1,0 +1,21 @@
+.newsGallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+.newsGallery .newsCard {
+  width: 300px;
+}
+.newsGallery .newsCard h3 {
+  font-size: 1.2rem;
+}
+.newsGallery .newsCard h3 span {
+  font-size: 1rem;
+  font-weight: lighter;
+}
+.newsGallery .newsCard img {
+  width: 100%;
+}
+
+/*# sourceMappingURL=News.css.map */
